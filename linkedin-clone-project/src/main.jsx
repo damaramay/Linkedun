@@ -7,16 +7,19 @@ import {
 import "./index.css";
 import Home from "./routes/Home"
 import Login from "./routes/Login"
+import ErrorPage from "./error-page";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <ErrorPage />
   },
   {
     path: "/login",
     element: <Login />,
+    errorElement: <ErrorPage />
   },
 ]);
 

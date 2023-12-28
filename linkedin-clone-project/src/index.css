@@ -1,50 +1,287 @@
-body {
-    overflow-y: scroll;
-    overflow-x: hidden;
+body,
+html {
+  height: 100vh;
+  margin: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+i,
+img,
+label,
+li,
+nav,
+p,
+small,
+span,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* border: 2px solid black; */
+}
+
+/* Start Login Page */
+.Login-Container {
+  padding: 0px;
+}
+
+.nav-login {
+  max-width: 1128px;
+  margin: auto;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 5px solid black; */
+
+  &>a {
+    width: 135px;
+    height: 34px;
+
+    @media (max-width: 768px) {
+      padding: 0px;
+
+      img {
+        width: 80px;
+        margin-top: 12px;
+        height: auto;
+      }
+    }
   }
-  
-  :root,
-  body,
-  html {
-    background-color: #f5f5f5;
+}
+
+.Login-or-signUp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+
+  @media (max-width: 768px) {
+    padding: 0;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid black; */
+  }
+}
+
+.Join-Login {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  padding: 10px 12px;
+  text-decoration: none;
+  border-radius: 22px;
+  color: #180c0ca9;  /* LinkedIn's blue color */
+  margin-right: 12px;
+
+  &:hover {
+    background-color:rgba(0, 0, 0, 0.08);
+    color: #180c0ce6;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 10px; /* Add some top margin for spacing on small screens */
+    border-radius: 20px;
+  }
+}
+
+.SignIn-Login {
+  box-shadow: inset 0 0 0 1px #0073b1; /* Use LinkedIn's blue color */
+  color: #0073b1;
+  border-radius: 24px;
+  transition-duration: 167ms;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  padding: 10px 24px;
+  text-align: center;
+  background-color: #fff; /* Use white background */
+
+  &:hover {
+    background-color:rgba(112, 181, 249, 0.15);
+    color: #180c0ce6;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 10px; /* Add some top margin for spacing on small screens */
+  }
+}
+
+
+.Section-Login {
+  display: flex;
+  align-content: start;
+  min-height: 700px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 40px; 
+  position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1128px;
+  align-items: center;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    margin: auto;
+    min-height: 0px;
+  }
+}
+
+.Hero {
+  width: 100%;
+
+  h1 {
+    padding-bottom: 0;
+    width: 55%;
+    font-size: 56px;
+    color: #b24020;
+    font-weight: 200;
+
+
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 20px;
+      width: 100%;
+      line-height: 2;
+    }
+  }
+
+  img {
+    /* z-index: -1; */
+    width: 700px;
+    height: 670px;
+    position: absolute;
+    bottom: -2px;
+    right: -150px;
+
+    @media (max-width: 768px) {
+      top: 230px;
+      width: 314px;
+      height: 214px;
+      position: initial;
+    }
+  }
+}
+
+.Form-Login {
+  margin-top: 100px;
+  width: 408px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+}
+
+.Input-Login-SignUp {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 20px;
+  /* border: 5px solid black; */
+
+  label {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  input {
+    width: 260px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     box-sizing: border-box;
   }
-  
-  div,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  header,
-  html,
-  i,
-  img,
-  label,
-  li,
-  nav,
-  p,
-  small,
-  span,
-  ul {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+
+  .forgot {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #0073b1;
+    /* LinkedIn's blue color */
+    text-align: right;
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-#error-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+  /* Style the submit button */
+  button {
     width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #0073b1;
+    /* LinkedIn's blue color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
+
+  /* Add styles for the link if needed */
+  a {
+    text-decoration: none;
+    color: #0073b1;
+    /* LinkedIn's blue color */
+  }
+}
+
+/* Optional: Add hover styles for the link */
+.Input-Login-SignUp a:hover {
+  text-decoration: underline;
+}
+
+.Google {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 60%),
+    inset 0 0 0 2px rgb(0 0 0 / 0%) inset 0 0 0 1px rgb(0 0 0 / 0);
+
+  vertical-align: middle;
+  z-index: 0;
+  transition-duration: 167ms;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6);
+
+  &:hover {
+    background-color: rgba(207, 207, 207, 0.25);
+    color: rgba(0, 0, 0, 0.75);
+  }
+}
+
+/* End Login Page */
